@@ -1,0 +1,50 @@
+.bred {
+    color: #E01E3C;
+}
+
+.bblack {
+    #161616;
+}
+
+.bwhite {
+    color: #ffffff;
+}
+
+@font-face {
+    font-family: "NunitoSans-Regular";
+    src: url("../fonts/NunitoSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Oswald-Regular";
+    src: url("../fonts/Oswald-Regular.ttf");
+}
+
+h1 h2 h3 {
+    font-family: "NunitoSans-Regular", sans-serif;
+}
+
+h1 {
+    font-size: 70px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+p {
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+button {
+    font-family: "Oswald", sans-serif;
+    font-size: 12px;
+}
