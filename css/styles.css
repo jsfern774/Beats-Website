@@ -48,3 +48,38 @@ button {
     font-family: "Oswald", sans-serif;
     font-size: 12px;
 }
+
+header {
+    background: #161616;
+    height: 80px;
+}
+
+.hero {
+    background: #999;
+    height: 80px;
+}
+
+.product-linup-container {
+    background: #333;
+    height: 400px;
+}
+
+.featured-product-container {
+    background: #444;
+    height: 400px;
+}
+
+.product-support-container {
+    background: #555;
+    height: 400px;
+}
+
+.subscription-container {
+    background: #666;
+    height: 400px;
+}
+
+footer {
+    background: #777;
+    height: 400px;
+}
