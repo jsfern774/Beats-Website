@@ -1,17 +1,6 @@
-/* GENERAL STYLES */
-
-.bred {
-    color: #E01E3C;
-}
-
-.bblack {
-    #161616;
-}
-
-.bwhite {
-    color: #ffffff;
-}
-
+/* ***********************************************
+GENERAL STYLES
+*********************************************** */
 @font-face {
     font-family: "NunitoSans-Regular";
     src: url("../fonts/NunitoSans-Regular.ttf");
@@ -24,7 +13,7 @@
 
 header {
     background-color: #161616;
-    height: 80px;
+    height: 60px;
     padding-top: 20px;
 }
 
@@ -34,7 +23,7 @@ h1 h2 h3 {
 
 h1 {
     font-size: 70px;
-    font-weight: 700;
+    font-weight: 900;
 }
 
 h2 {
@@ -52,21 +41,45 @@ p {
     font-size: 16px;
 }
 
-button {
+.button {
     font-family: "Oswald-Regular", sans-serif;
     font-size: 12px;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    margin: 10px;
 }
 
-/* HEADER STYLES */
+.red-button {
+    background: #e01e3c;
+    color: white;
+    border: 1px solid #e01e3c;
+}
 
-header .logo {
+.light-button {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.dark-button {
+    background: white;
+    color: #161616;
+    border: 2px solid white;
+}
+
+/* ***********************************************
+DESKTOP STYLES
+*********************************************** */
+.desktop-nav .logo {
     background-image: url("../img/logo.svg");
     height: 40px;
     width: 40px;
     background-size: 40px;
+    float: left;
 }
 
-header ul {
+.desktop-nav ul {
     float: right;
     margin-top: 10px;
     padding: 0;
@@ -74,76 +87,28 @@ header ul {
     text-align: right;
 }
 
-header li {
+.desktop-nav li {
     display: inline-block;
     margin-left: 25px;
 }
 
-header a,
-header a:visited {
+.desktop-nav a,
+.desktop-nav a:visited {
     font-family: "Oswald-Regular";
     text-transform: uppercase;
     color: #ffffff;
 }
 
-header a:hover,
-header a:focus,
-header a:active {
+.desktop-nav a:hover,
+.desktop-nav a:focus,
+.desktop-nav a:active {
     text-decoration: none;
     color: #ffffff;
-    opacity: .5;
+    opacity: .9;
 }
-
-
-
-
-.desktop-nav .logo {
-    float: left;
-}
-
-.hero {
-    background-image: url("../img/hero-large.jpg");
-    height: 700px;
-    width: auto;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-image: linear-gradient(
-        180deg,
-        rgba(6, 3, 28, 0),
-        rgba(6, 3, 28, 0.5),
-        rgba(6, 3, 28, 1)
-        ),;
-        background-image: url("../img/hero-large.jpg");
-}
-
-
-.product-linup-container {
-    background: #333;
-    height: 400px;
-}
-
-.featured-product-container {
-    background: #444;
-    height: 400px;
-}
-
-.product-support-container {
-    background: #555;
-    height: 400px;
-}
-
-.subscription-container {
-    background: #666;
-    height: 400px;
-}
-
-footer {
-    background: #777;
-    height: 90px;
-}
-
-/* media section */
+/* ***********************************************
+MOBILE STYLES
+*********************************************** */
 
 .mobile-nav {
     display: none;
@@ -152,23 +117,19 @@ footer {
 
 .mobile-nav .logo {
     display: inline-block;
-}
-
-@media (max-width: 768px) {
-    .mobile-nav {
-        display: block;
-    }
-    .desktop-nav {
-        display: none;
-    }
+    background-image: url("../img/logo.svg");
+    height: 40px;
+    width: 40px;
+    background-size: 40px;
 }
 
 .mobile-nav .search-container
 .mobile-nav .hamburger-container {
     width: 40px;
+    margin-top:8px;
     display: inline-block;
-    background: red;
     margin-left: -4px;
+    vertical-align: top;
 }
 
 .mobile-nav .logo-container {
@@ -183,9 +144,109 @@ footer {
     color: white;
 }
 
+/* ***********************************************
+HERO STYLES
+*********************************************** */
 
-/* @media (min-width: 1000px) {
-    .box {
-        background: blue;
+.hero {
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: auto;
+    text-align: center;
+    margin-top
+}
+
+.hero-text-container {
+    padding-top: 60vh;
+}
+
+.hero-text-container h1 {
+    margin-bottom: 10px;
+}
+
+.hero-text-container p {
+    margin-bottom: 40px;
+}
+
+
+.desktop-nav .hero {
+    height: calc(100vh - 60px);
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 1)
+        ),url("../img/hero-large.jpg");
+}
+
+.mobile-nav .hero {
+    height: calc(80vh - 60px);
+    width: auto;
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 1)
+        ),url("../img/hero-small.jpg");
+}
+
+@media (max-width: 768px) {
+    .mobile-nav {
+        display: block;
     }
-} */
+    .desktop-nav {
+        display: none;
+    }
+}
+
+/* ***********************************************
+PRODUCT-LINEUP STYLES
+*********************************************** */
+.product-linup-container {
+    background: #333;
+    height: 400px;
+}
+
+/* ***********************************************
+FEATURED-PRODUCT STYLES
+*********************************************** */
+.featured-product-container {
+    background: #444;
+    height: 400px;
+}
+
+/* ***********************************************
+PRODUCT-SUPPORT STYLES
+*********************************************** */
+.product-support-container {
+    background: #555;
+    height: 400px;
+}
+
+/* ***********************************************
+SUBSCRIPTION STYLES
+*********************************************** */
+.subscription-container {
+    background: #666;
+    height: 400px;
+}
+
+/* ***********************************************
+FOOTER STYLES
+*********************************************** */
+footer {
+    background: #777;
+    height: 90px;
+}
+
+/* ***********************************************
+@MEDIA STYLES
+*********************************************** */
+@media (max-width: 768px) {
+    .mobile-nav {
+        display: block;
+    }
+    .desktop-nav {
+        display: none;
+    }
+}
